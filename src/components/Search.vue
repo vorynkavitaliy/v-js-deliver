@@ -1,12 +1,17 @@
 <template>
     <v-layout align-center class="navbar-search">
         <v-form @submit.prevent="getPackages">
-            <v-text-field
-                v-model.trim="name"
-                label="NPM Пакет"
-                clearable
-                hide-details="true"
-            ></v-text-field>
+            <v-layout>
+                <v-text-field
+                    v-model.trim="name"
+                    label="NPM Пакет"
+                    clearable
+                    hide-details="true"
+                ></v-text-field>
+                <v-btn dark type="submit">
+                    <v-icon>mdi-magnify</v-icon>
+                </v-btn>
+            </v-layout>
         </v-form>
 
         <Alert :isAlert="isAlert" />

@@ -48,7 +48,18 @@
 export default {
     data: () => ({
         show: false,
-        skills: ['HTML', 'CSS', 'JavaScript', 'Vue', 'Nuxt', 'React', 'Redux', 'ReactNative', 'SCSS', 'SASS']
+        skills: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Vue',
+            'Nuxt',
+            'React',
+            'Redux',
+            'ReactNative',
+            'SCSS',
+            'SASS'
+        ]
     })
 }
 </script>

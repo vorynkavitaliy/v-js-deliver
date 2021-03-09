@@ -28,6 +28,7 @@ export default {
                     commit('clearError')
                     commit('setLoading', false)
                 } else {
+                    commit('setError', 'По вашему запросу ничего не найдено')
                     commit('setLoading', false)
                 }
             } catch (error) {
