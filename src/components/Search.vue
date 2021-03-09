@@ -35,7 +35,7 @@ export default {
             if (this.$store.getters.counter < 3 || this.$store.getters.isUserLoggedIn) {
                 if (this.name !== '') {
                     const formData = {
-                        name: this.name
+                        name: this.name.toLowerCase()
                     }
                     if (window.location.pathname !== '/') {
                         this.$router.push('/')
