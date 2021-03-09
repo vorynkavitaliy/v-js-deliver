@@ -5,9 +5,9 @@
 
             <Table :packagesArray="getPackages" />
         </v-layout>
-        <v-alert class="absolute" dense outlined text dark type="error">
-            I'm an alert with a top border and red color
-        </v-alert>
+        <v-layout v-else align-center justify-center>
+            Введите данные для поиска
+        </v-layout>
     </div>
 </template>
 
@@ -23,8 +23,3 @@ export default {
     }
 }
 </script>
-
-<style lang="sass" scoped>
-.home
-    display: flex
-</style>

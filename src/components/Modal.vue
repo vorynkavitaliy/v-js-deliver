@@ -1,13 +1,5 @@
 <template>
     <v-card>
-        <!-- <v-toolbar color="primary" dark>{{getPackage.name}}</v-toolbar>
-        <v-card-text>
-            <div class="text-h2 pa-12"></div>
-        </v-card-text>
-        <v-card-actions class="justify-end">
-            <v-btn text @click="dialog.value = false">Close</v-btn>
-        </v-card-actions> -->
-
         <v-expansion-panels>
             <v-expansion-panel v-for="(item, i) in getPackage" :key="item.name + i">
                 <v-expansion-panel-header>
@@ -39,7 +31,7 @@ export default {
             return [
                 { text: 'Name', value: 'name' },
                 { text: 'Hash', value: 'hash' },
-                { text: 'Time', value: 'time' },
+                { text: 'Time', value: 'time' }
             ]
         }
     }

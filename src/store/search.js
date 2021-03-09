@@ -12,7 +12,7 @@ export default {
     mutations: {
         setPackages: (state, payload) => (state.packages = payload),
         setPackageByVersion: (state, payload) => (state.packagesDetailsByVersion = payload),
-        plusCounter: state => ++state.counter,
+        plusCounter: state => ++state.counter
     },
     actions: {
         async fetchPackages({ commit }, payload) {
@@ -56,6 +56,6 @@ export default {
     getters: {
         packages: state => state.packages,
         packageBiVersion: state => state.packagesDetailsByVersion,
-        counter: state => state.counter,
+        counter: state => state.counter
     }
 }

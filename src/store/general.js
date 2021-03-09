@@ -19,8 +19,8 @@ export default {
     actions: {
         setLoading: ({ commit }, payload) => commit('setLoading', payload),
         setError: ({ commit }, payload) => commit('setLoading', payload),
-        setSuccess: ({ commit }, payload) => commit('setLoading', payload),
-        clearError: ({ commit }) => commit('setLoading'),
+        setSuccess: ({ commit }, payload) => commit('setSuccess', payload),
+        clearError: ({ commit }) => commit('clearError'),
         clearSuccess: ({ commit }) => commit('clearSuccess')
     },
 

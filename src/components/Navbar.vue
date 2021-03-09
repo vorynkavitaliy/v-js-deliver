@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-container>
         <v-navigation-drawer app dark flat v-model="drawer">
             <v-list>
                 <v-list-item-group>
@@ -33,7 +33,7 @@
                 </router-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <search/>
+            <search />
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn
                     icon
@@ -59,7 +59,7 @@
                 </v-btn>
             </v-toolbar-items>
         </v-app-bar>
-    </div>
+    </v-container>
 </template>
 
 <script>
@@ -78,7 +78,7 @@ export default {
 
     computed: {
         isUserLoggedIn() {
-            return false
+            return this.$store.getters.isUserLoggedIn
         },
 
         links() {
@@ -98,6 +98,7 @@ export default {
 
     methods: {
         onLogout() {
+            this.$store.dispatch('logoutUser')
             this.$router.push('/').catch(() => {})
         }
     }

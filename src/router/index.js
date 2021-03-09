@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import AuthGuard from './auth-guard'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Login from '../views/Login.vue'
 import Registration from '../views/Registration.vue'
+import NotFound from '../views/404.vue'
 
 Vue.use(VueRouter)
 
@@ -17,7 +19,8 @@ const routes = [
     {
         path: '/about',
         name: 'About',
-        component: About
+        component: About,
+        beforeEnter: AuthGuard
     },
 
     {
@@ -30,6 +33,15 @@ const routes = [
         path: '/registration',
         name: 'Registration',
         component: Registration
+    },
+    {
+        path: '/404',
+        name: '404',
+        component: NotFound
+    },
+    {
+        path: '*',
+        redirect: '/404'
     }
 ]
 
